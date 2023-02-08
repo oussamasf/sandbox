@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import useForm from "../hooks/useForm";
 import "./App.css";
 
@@ -7,6 +8,9 @@ function App() {
     email: "",
     password: "",
   });
+  useEffect(() => {
+    console.log("things");
+  }, [form.name]);
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(form);
